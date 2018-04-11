@@ -31,7 +31,13 @@ namespace EncapsulationAndAbstractionDemo
                     + "paid for {0} hours (w/overtime) at $ {1}"
                     + "/hr = ${2}", hours, wage, salary);
 
+                Test(); // the private method can only be accessed inside this class.
+            }
 
+            // Encapulated by Contractor Class. Will not be accessable by any other classes.
+            private void Test() 
+            {
+                Console.WriteLine("Only the CONTRACTOR can access me!");
             }
         }
 
